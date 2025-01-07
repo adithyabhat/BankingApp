@@ -10,19 +10,19 @@ let package = Package(
         .macOS(.v10_15)
     ],
     products: [
-            .library(
-                name: "AuthenticationModule",
-                targets: ["AuthenticationModule"]),
-        ],
-        dependencies: [
-            .package(path: "../CoreModule")
-        ],
-        targets: [
-            .target(
-                name: "AuthenticationModule",
-                dependencies: ["CoreModule"]),
-            .testTarget(
-                name: "AuthenticationModuleTests",
-                dependencies: ["AuthenticationModule"])
-        ]
+        .library(
+            name: "AuthenticationModule",
+            targets: ["AuthenticationModule"]),
+    ],
+    dependencies: [
+        .package(path: "../CoreModule")
+    ],
+    targets: [
+        .target(
+            name: "AuthenticationModule",
+            dependencies: ["CoreModule"]),
+        .testTarget(
+            name: "AuthenticationModuleTests",
+            dependencies: ["AuthenticationModule"])
+    ]
 )
